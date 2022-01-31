@@ -27,7 +27,7 @@ function explode(modifier, {recursive=true}={}) {
     } else {
         max = 1 //handling the xo operator here passes down the chain nicer, and appears to be equivalent to current behaviour
     }
-    comparisons = {max, comparison, target}
+    let comparisons = {max, comparison, target}
     this.explosions.push({comparisons, checked:0})
     // Recursively explode until there are no remaining results to explode
     let checked = 0;
