@@ -22,11 +22,9 @@ function explode(modifier, {recursive=true}={}) {
     // Determine target values
     target = Number.isNumeric(target) ? parseInt(target) : this.faces;
     comparison = comparison || "=";
-    if(recursive) {
-        max = Number.isNumeric(max) ? parseInt(max) : null;
-    } else {
-        max = 1 //handling the xo operator here passes down the chain nicer, and appears to be equivalent to current behaviour
-    }
+
+    max = Number.isNumeric(max) ? parseInt(max) : null;
+
     let comparisons = {max, comparison, target}
     this.explosions.push({comparisons, checked:0})
     // Recursively explode until there are no remaining results to explode
@@ -55,6 +53,7 @@ function explode(modifier, {recursive=true}={}) {
       }
 
       // Limit recursion
+      if ( !recursive && (checked === initial) ) break;
       if ( checked > 1000 ) throw new Error("Maximum recursion depth for exploding dice roll exceeded");
     }
   }

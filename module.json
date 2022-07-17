@@ -1,28 +1,24 @@
 {
-  "name": "chain-reaction",
   "title": "Chain Reaction",
   "description": "Provides a remprary fix to an obscure bug with multiply exploding dice, e.g. 1d20x10x20",
   "version": "This is auto replaced",
-  "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9",
   "authors": [
     {
       "name": "BadIdeasBureau"
     }
   ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
-  ],
   "esmodules": [
     "/scripts/module.js"
   ],
-
   "url": "This is auto replaced",
   "manifest": "This is auto replaced",
-  "download": "This is auto replaced"
+  "download": "This is auto replaced",
+  "id": "chain-reaction",
+  "compatibility": {
+    "minimum": "9",
+    "verified": "10"
+  },
+  "name": "chain-reaction",
+  "minimiumCoreVersion": "9",
+  "compatibleCoreVersion": "10"
 }
